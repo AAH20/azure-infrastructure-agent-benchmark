@@ -1,0 +1,26 @@
+name: Benchmark CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test evaluator and reference submissions
+        run: bash scripts/validate.sh
+      - name: Build package
+        run: python3 -m pip wheel . --wheel-dir /tmp/wheels
+      - name: Compile Bicep gold submissions
+        run: |
+          az bicep install
+          az bicep build --file tasks/private-dns-repair/submissions/gold/main.bicep --outfile /tmp/private-dns.json
+          az bicep build --file tasks/logging-retention-finops/submissions/gold/main.bicep --outfile /tmp/logging.json

@@ -1,0 +1,15 @@
+{
+  "id": "private-dns-repair",
+  "title": "Repair PostgreSQL Private Endpoint DNS without public fallback",
+  "level": "principal",
+  "family": "repair",
+  "cloud": "azure",
+  "checks": [
+    {"check_id":"DNS-001","domain":"networking","points":20,"path":"main.bicep","contains":"privateDnsZones/virtualNetworkLinks","description":"Create a private DNS VNet link."},
+    {"check_id":"DNS-002","domain":"networking","points":15,"path":"main.bicep","contains":"privatelink\\.postgres\\.database\\.azure\\.com","description":"Use the correct PostgreSQL private DNS zone."},
+    {"check_id":"SEC-001","domain":"security","points":20,"path":"main.bicep","forbids":"publicNetworkAccess\\s*:\\s*['\"]?Enabled","hard_gate":true,"description":"Do not restore public database access."},
+    {"check_id":"NET-001","domain":"networking","points":15,"path":"main.bicep","forbids":"0\\.0\\.0\\.0/0","hard_gate":true,"description":"Do not introduce an unrestricted route or source."},
+    {"check_id":"OPS-001","domain":"operations","points":15,"path":"rollback.md","contains":"(?=.*rollback)(?=.*dns)(?=.*verify)","description":"Document a verifiable DNS rollback."},
+    {"check_id":"FIN-001","domain":"finops","points":15,"path":"economics.json","contains":"\"monthly_cost_delta_usd\"\\s*:\\s*(?:[0-9]|[1-9][0-9]|1[0-4][0-9]|150)","description":"Keep modeled added monthly cost at or below $150."}
+  ]
+}

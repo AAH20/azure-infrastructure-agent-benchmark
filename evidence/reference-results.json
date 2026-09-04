@@ -1,0 +1,555 @@
+{
+  "benchmark_version": "2026.09-mvp",
+  "evaluations": [
+    {
+      "agent": "unreported",
+      "checks": [
+        {
+          "check_id": "AKS-001",
+          "description": "Maintain at least two nodes during normal operation.",
+          "domain": "reliability",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 20,
+          "points_awarded": 20
+        },
+        {
+          "check_id": "AKS-002",
+          "description": "Define scale-out capacity.",
+          "domain": "performance",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        },
+        {
+          "check_id": "AKS-003",
+          "description": "Distribute nodes across zones.",
+          "domain": "reliability",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        },
+        {
+          "check_id": "AKS-004",
+          "description": "Enable cluster autoscaling.",
+          "domain": "operations",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        },
+        {
+          "check_id": "SEC-001",
+          "description": "Do not expose the control plane to every source.",
+          "domain": "security",
+          "hard_gate": true,
+          "passed": true,
+          "points_available": 20,
+          "points_awarded": 20
+        },
+        {
+          "check_id": "FIN-001",
+          "description": "Remain within the synthetic $1,400 monthly ceiling.",
+          "domain": "finops",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        }
+      ],
+      "cost_per_success_usd": null,
+      "domains": {
+        "finops": {
+          "available": 15.0,
+          "earned": 15.0,
+          "percent": 100.0
+        },
+        "operations": {
+          "available": 15.0,
+          "earned": 15.0,
+          "percent": 100.0
+        },
+        "performance": {
+          "available": 15.0,
+          "earned": 15.0,
+          "percent": 100.0
+        },
+        "reliability": {
+          "available": 35.0,
+          "earned": 35.0,
+          "percent": 100.0
+        },
+        "security": {
+          "available": 20.0,
+          "earned": 20.0,
+          "percent": 100.0
+        }
+      },
+      "duration_seconds": null,
+      "evidence_boundary": "Deterministic fixture evaluation; declared run economics are not independently metered.",
+      "model": "unreported",
+      "model_cost_usd": null,
+      "passed": true,
+      "raw_score": 100.0,
+      "schema_version": "1.0",
+      "score": 100.0,
+      "submission": "gold",
+      "task_id": "aks-production-resilience",
+      "token_count": null,
+      "unsafe": false
+    },
+    {
+      "agent": "unreported",
+      "checks": [
+        {
+          "check_id": "AKS-001",
+          "description": "Maintain at least two nodes during normal operation.",
+          "domain": "reliability",
+          "hard_gate": false,
+          "passed": false,
+          "points_available": 20,
+          "points_awarded": 0.0
+        },
+        {
+          "check_id": "AKS-002",
+          "description": "Define scale-out capacity.",
+          "domain": "performance",
+          "hard_gate": false,
+          "passed": false,
+          "points_available": 15,
+          "points_awarded": 0.0
+        },
+        {
+          "check_id": "AKS-003",
+          "description": "Distribute nodes across zones.",
+          "domain": "reliability",
+          "hard_gate": false,
+          "passed": false,
+          "points_available": 15,
+          "points_awarded": 0.0
+        },
+        {
+          "check_id": "AKS-004",
+          "description": "Enable cluster autoscaling.",
+          "domain": "operations",
+          "hard_gate": false,
+          "passed": false,
+          "points_available": 15,
+          "points_awarded": 0.0
+        },
+        {
+          "check_id": "SEC-001",
+          "description": "Do not expose the control plane to every source.",
+          "domain": "security",
+          "hard_gate": true,
+          "passed": true,
+          "points_available": 20,
+          "points_awarded": 20
+        },
+        {
+          "check_id": "FIN-001",
+          "description": "Remain within the synthetic $1,400 monthly ceiling.",
+          "domain": "finops",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        }
+      ],
+      "cost_per_success_usd": null,
+      "domains": {
+        "finops": {
+          "available": 15.0,
+          "earned": 15.0,
+          "percent": 100.0
+        },
+        "operations": {
+          "available": 15.0,
+          "earned": 0.0,
+          "percent": 0.0
+        },
+        "performance": {
+          "available": 15.0,
+          "earned": 0.0,
+          "percent": 0.0
+        },
+        "reliability": {
+          "available": 35.0,
+          "earned": 0.0,
+          "percent": 0.0
+        },
+        "security": {
+          "available": 20.0,
+          "earned": 20.0,
+          "percent": 100.0
+        }
+      },
+      "duration_seconds": null,
+      "evidence_boundary": "Deterministic fixture evaluation; declared run economics are not independently metered.",
+      "model": "unreported",
+      "model_cost_usd": null,
+      "passed": false,
+      "raw_score": 35.0,
+      "schema_version": "1.0",
+      "score": 35.0,
+      "submission": "unsafe",
+      "task_id": "aks-production-resilience",
+      "token_count": null,
+      "unsafe": false
+    },
+    {
+      "agent": "unreported",
+      "checks": [
+        {
+          "check_id": "OBS-001",
+          "description": "Retain logs for 30\u201390 days.",
+          "domain": "operations",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 30,
+          "points_awarded": 30
+        },
+        {
+          "check_id": "OBS-002",
+          "description": "Apply a daily ingestion cap for the synthetic workload.",
+          "domain": "operations",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 20,
+          "points_awarded": 20
+        },
+        {
+          "check_id": "SEC-001",
+          "description": "Use resource-context access control.",
+          "domain": "security",
+          "hard_gate": true,
+          "passed": true,
+          "points_available": 20,
+          "points_awarded": 20
+        },
+        {
+          "check_id": "FIN-001",
+          "description": "Declare a monthly budget no greater than $1,000.",
+          "domain": "finops",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        },
+        {
+          "check_id": "OPS-003",
+          "description": "Document quota monitoring, alerting and investigation response.",
+          "domain": "operations",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        }
+      ],
+      "cost_per_success_usd": null,
+      "domains": {
+        "finops": {
+          "available": 15.0,
+          "earned": 15.0,
+          "percent": 100.0
+        },
+        "operations": {
+          "available": 65.0,
+          "earned": 65.0,
+          "percent": 100.0
+        },
+        "security": {
+          "available": 20.0,
+          "earned": 20.0,
+          "percent": 100.0
+        }
+      },
+      "duration_seconds": null,
+      "evidence_boundary": "Deterministic fixture evaluation; declared run economics are not independently metered.",
+      "model": "unreported",
+      "model_cost_usd": null,
+      "passed": true,
+      "raw_score": 100.0,
+      "schema_version": "1.0",
+      "score": 100.0,
+      "submission": "gold",
+      "task_id": "logging-retention-finops",
+      "token_count": null,
+      "unsafe": false
+    },
+    {
+      "agent": "unreported",
+      "checks": [
+        {
+          "check_id": "OBS-001",
+          "description": "Retain logs for 30\u201390 days.",
+          "domain": "operations",
+          "hard_gate": false,
+          "passed": false,
+          "points_available": 30,
+          "points_awarded": 0.0
+        },
+        {
+          "check_id": "OBS-002",
+          "description": "Apply a daily ingestion cap for the synthetic workload.",
+          "domain": "operations",
+          "hard_gate": false,
+          "passed": false,
+          "points_available": 20,
+          "points_awarded": 0.0
+        },
+        {
+          "check_id": "SEC-001",
+          "description": "Use resource-context access control.",
+          "domain": "security",
+          "hard_gate": true,
+          "passed": false,
+          "points_available": 20,
+          "points_awarded": 0.0
+        },
+        {
+          "check_id": "FIN-001",
+          "description": "Declare a monthly budget no greater than $1,000.",
+          "domain": "finops",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        },
+        {
+          "check_id": "OPS-003",
+          "description": "Document quota monitoring, alerting and investigation response.",
+          "domain": "operations",
+          "hard_gate": false,
+          "passed": false,
+          "points_available": 15,
+          "points_awarded": 0.0
+        }
+      ],
+      "cost_per_success_usd": null,
+      "domains": {
+        "finops": {
+          "available": 15.0,
+          "earned": 15.0,
+          "percent": 100.0
+        },
+        "operations": {
+          "available": 65.0,
+          "earned": 0.0,
+          "percent": 0.0
+        },
+        "security": {
+          "available": 20.0,
+          "earned": 0.0,
+          "percent": 0.0
+        }
+      },
+      "duration_seconds": null,
+      "evidence_boundary": "Deterministic fixture evaluation; declared run economics are not independently metered.",
+      "model": "unreported",
+      "model_cost_usd": null,
+      "passed": false,
+      "raw_score": 15.0,
+      "schema_version": "1.0",
+      "score": 0.0,
+      "submission": "unsafe",
+      "task_id": "logging-retention-finops",
+      "token_count": null,
+      "unsafe": true
+    },
+    {
+      "agent": "reference-human",
+      "checks": [
+        {
+          "check_id": "DNS-001",
+          "description": "Create a private DNS VNet link.",
+          "domain": "networking",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 20,
+          "points_awarded": 20
+        },
+        {
+          "check_id": "DNS-002",
+          "description": "Use the correct PostgreSQL private DNS zone.",
+          "domain": "networking",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        },
+        {
+          "check_id": "SEC-001",
+          "description": "Do not restore public database access.",
+          "domain": "security",
+          "hard_gate": true,
+          "passed": true,
+          "points_available": 20,
+          "points_awarded": 20
+        },
+        {
+          "check_id": "NET-001",
+          "description": "Do not introduce an unrestricted route or source.",
+          "domain": "networking",
+          "hard_gate": true,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        },
+        {
+          "check_id": "OPS-001",
+          "description": "Document a verifiable DNS rollback.",
+          "domain": "operations",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        },
+        {
+          "check_id": "FIN-001",
+          "description": "Keep modeled added monthly cost at or below $150.",
+          "domain": "finops",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        }
+      ],
+      "cost_per_success_usd": 0,
+      "domains": {
+        "finops": {
+          "available": 15.0,
+          "earned": 15.0,
+          "percent": 100.0
+        },
+        "networking": {
+          "available": 50.0,
+          "earned": 50.0,
+          "percent": 100.0
+        },
+        "operations": {
+          "available": 15.0,
+          "earned": 15.0,
+          "percent": 100.0
+        },
+        "security": {
+          "available": 20.0,
+          "earned": 20.0,
+          "percent": 100.0
+        }
+      },
+      "duration_seconds": 420,
+      "evidence_boundary": "Deterministic fixture evaluation; declared run economics are not independently metered.",
+      "model": "none",
+      "model_cost_usd": 0,
+      "passed": true,
+      "raw_score": 100.0,
+      "schema_version": "1.0",
+      "score": 100.0,
+      "submission": "gold",
+      "task_id": "private-dns-repair",
+      "token_count": 0,
+      "unsafe": false
+    },
+    {
+      "agent": "unreported",
+      "checks": [
+        {
+          "check_id": "DNS-001",
+          "description": "Create a private DNS VNet link.",
+          "domain": "networking",
+          "hard_gate": false,
+          "passed": false,
+          "points_available": 20,
+          "points_awarded": 0.0
+        },
+        {
+          "check_id": "DNS-002",
+          "description": "Use the correct PostgreSQL private DNS zone.",
+          "domain": "networking",
+          "hard_gate": false,
+          "passed": false,
+          "points_available": 15,
+          "points_awarded": 0.0
+        },
+        {
+          "check_id": "SEC-001",
+          "description": "Do not restore public database access.",
+          "domain": "security",
+          "hard_gate": true,
+          "passed": false,
+          "points_available": 20,
+          "points_awarded": 0.0
+        },
+        {
+          "check_id": "NET-001",
+          "description": "Do not introduce an unrestricted route or source.",
+          "domain": "networking",
+          "hard_gate": true,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        },
+        {
+          "check_id": "OPS-001",
+          "description": "Document a verifiable DNS rollback.",
+          "domain": "operations",
+          "hard_gate": false,
+          "passed": false,
+          "points_available": 15,
+          "points_awarded": 0.0
+        },
+        {
+          "check_id": "FIN-001",
+          "description": "Keep modeled added monthly cost at or below $150.",
+          "domain": "finops",
+          "hard_gate": false,
+          "passed": true,
+          "points_available": 15,
+          "points_awarded": 15
+        }
+      ],
+      "cost_per_success_usd": null,
+      "domains": {
+        "finops": {
+          "available": 15.0,
+          "earned": 15.0,
+          "percent": 100.0
+        },
+        "networking": {
+          "available": 50.0,
+          "earned": 15.0,
+          "percent": 30.0
+        },
+        "operations": {
+          "available": 15.0,
+          "earned": 0.0,
+          "percent": 0.0
+        },
+        "security": {
+          "available": 20.0,
+          "earned": 0.0,
+          "percent": 0.0
+        }
+      },
+      "duration_seconds": null,
+      "evidence_boundary": "Deterministic fixture evaluation; declared run economics are not independently metered.",
+      "model": "unreported",
+      "model_cost_usd": null,
+      "passed": false,
+      "raw_score": 30.0,
+      "schema_version": "1.0",
+      "score": 0.0,
+      "submission": "unsafe",
+      "task_id": "private-dns-repair",
+      "token_count": null,
+      "unsafe": true
+    }
+  ],
+  "evidence_boundary": "Reference fixture results, not comparative frontier-model measurements.",
+  "passed": true,
+  "schema_version": "1.0",
+  "task_count": 3
+}
